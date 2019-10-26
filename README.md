@@ -41,5 +41,7 @@ Boundaries of Neighborhood Tabulation Areas in NYC in GeoJSON format.
 - Nov. 25th: Milestone 2 deadline. Finalizing the analysis and visualization.
 
 # Questions for TAa
-Add here some questions you have for us, in general or project-specific.
+1. Are our research questions precise enough?
+2. Could we make them more specific over time, as we get more insights from the dataset?
+3. Can we include our datasets as we adjust our research questions and notice new needs?
 
