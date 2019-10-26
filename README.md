@@ -14,8 +14,8 @@ All those requests are made publicly available with a lot of information regardi
  the communication between a city and it's inhabitants.
 
 # Research questions
-* Can we rank neighborhood based the number/delay of requests?
-* Can we identify recurring patterns/seasonality that could be prevented?
+* Can we rank neighborhoods based the number/delay of requests?
+* Can we identify recurring patterns/seasonality that could help preventing the issues?
 * Is there a clear trend of the problems?
 * Can we identify external events that influence the rate of requests within a timeframe?
 
