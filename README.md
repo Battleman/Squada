@@ -21,6 +21,7 @@ All those requests are made publicly available with a lot of information regardi
 
 # Datasets
 List the dataset(s) you want to use, and some ideas on how do you expect to get, manage, process and enrich it/them. Show us you've read the docs and some examples, and you've a clear idea on what to expect. Discuss data size and format if relevant.
+
 ## Datasets we will use
 1. **NYC 311 Service Requests from 2010 to Present**\
 All the 311 requests from 2010 up till now, updated daily. Currently about 22M entries, publicly available.
@@ -32,7 +33,8 @@ Self explanatory. In csv format.
 Boundaries of Neighborhood Tabulation Areas in NYC in GeoJSON format. 
 
 ## Methodology
-
+1. The data can be accessed from [data.cityofnewyork.us](https://data.cityofnewyork.us/)
+2. The 311 dataset contains location based on GPS coordinates while the population data is based on the Neighborhood Tabulation Areas, so we will have to map the requests to regions using the Neighborhood Tabulation Areas dataset.
 
 # A list of internal milestones up until project milestone 2
 - Nov. 4th: Making sure the data is clean, downloading it and deciding on a pipeline (Spark?)
