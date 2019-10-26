@@ -14,7 +14,10 @@ All those requests are made publicly available with a lot of information regardi
  the communication between a city and it's inhabitants.
 
 # Research questions
-* 
+* Can we rank neighborhood based the number/delay of requests?
+* Can we identify recurring patterns/seasonality that could be prevented?
+* Is there a clear trend of the problems?
+* Can we identify external events that influence the rate of requests within a timeframe?
 
 # Datasets
 List the dataset(s) you want to use, and some ideas on how do you expect to get, manage, process and enrich it/them. Show us you've read the docs and some examples, and you've a clear idea on what to expect. Discuss data size and format if relevant.
@@ -32,7 +35,10 @@ Boundaries of Neighborhood Tabulation Areas in NYC in GeoJSON format.
 
 
 # A list of internal milestones up until project milestone 2
-Add here a sketch of your planning for the next project milestone.
+- Nov. 4th: Making sure the data is clean, and deciding of a pipeline (Spark?)
+- Nov. 11th: Select relevant attributes, join data with other tables.
+- Nov. 18th: First version of the analysis notebook with initial plots and visualization. Find more specific/additional research questions
+- Nov. 25th: Milestone 2 deadline
 
 # Questions for TAa
 Add here some questions you have for us, in general or project-specific.
