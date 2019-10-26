@@ -23,13 +23,13 @@ All those requests are made publicly available with a lot of information regardi
 List the dataset(s) you want to use, and some ideas on how do you expect to get, manage, process and enrich it/them. Show us you've read the docs and some examples, and you've a clear idea on what to expect. Discuss data size and format if relevant.
 
 ## Datasets we will use
-1. **NYC 311 Service Requests from 2010 to Present**\
+- **NYC 311 Service Requests from 2010 to Present**\
 All the 311 requests from 2010 up till now, updated daily. Currently about 22M entries, publicly available.
 The data is stored in csv format and contains attributes like: Complaint Type, Created Date, Closed Date, Due Date,
 Incident Address, etc.
-2.  **NYC Population By Neighborhood Tabulation Areas**\
+-  **NYC Population By Neighborhood Tabulation Areas**\
 Self explanatory. In csv format.
-3.  **Neighborhood Tabulation Areas**\
+-  **Neighborhood Tabulation Areas**\
 Boundaries of Neighborhood Tabulation Areas in NYC in GeoJSON format. 
 
 ## Methodology
