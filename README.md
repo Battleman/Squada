@@ -38,7 +38,7 @@ Boundaries of Neighborhood Tabulation Areas in NYC in GeoJSON format.
 - Nov. 4th: Making sure the data is clean, downloading it and deciding on a pipeline (Spark?)
 - Nov. 11th: Selecting relevant attributes, joining data from multiple tables. Cleaning the datasets.
 - Nov. 18th: First version of the analysis notebook with initial plots and visualization. Finding more specific/additional research questions.
-- Nov. 25th: Milestone 2 deadline
+- Nov. 25th: Milestone 2 deadline. Finalizing the analysis and visualization.
 
 # Questions for TAa
 Add here some questions you have for us, in general or project-specific.
