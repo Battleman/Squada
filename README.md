@@ -18,7 +18,13 @@ All those requests are made publicly available with a lot of information regardi
 
 # Dataset
 List the dataset(s) you want to use, and some ideas on how do you expect to get, manage, process and enrich it/them. Show us you've read the docs and some examples, and you've a clear idea on what to expect. Discuss data size and format if relevant.
-
+* NYC 311 Service Requests from 2010 to Present\
+All the 311 requests from 2010 up till now, updated daily. Currently about 22M entries, publicly available.
+The data is stored in csv format and contains attributes like: Complaint Type, Created Date, Closed Date, Due Date,
+Incident Address, etc.
+* NYC Population By Neighborhood Tabulation Areas\
+Self explanatory. In csv format.
+* 
 
 # A list of internal milestones up until project milestone 2
 Add here a sketch of your planning for the next project milestone.
