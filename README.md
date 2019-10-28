@@ -35,6 +35,9 @@ Boundaries of Neighborhood Tabulation Areas in NYC in GeoJSON format.
 ## Methodology
 1. The data can be accessed from [data.cityofnewyork.us](https://data.cityofnewyork.us/)
 2. The 311 dataset contains location based on GPS coordinates while the population data is based on the Neighborhood Tabulation Areas, so we will have to map the requests to regions using the Neighborhood Tabulation Areas dataset.
+3. Analyse complaint types and dates to identify short-term and long-term trends for Neighborhood Tabulation Areas, seasonalities, and separate the changes within neighborhoods from city-wide trends.
+4. Compile a clean dataset of the external events related to neighborhoods, and attempt to provide insights on the changes observed by relating event timestamps to our trends.
+5. Provide a ranking of neighborhoods using relevant metrics that we will infer from the data analysis process.
 
 # A list of internal milestones up until project milestone 2
 - Nov. 4th: Making sure the data is clean, downloading it and deciding on a pipeline (Spark?)
@@ -46,4 +49,6 @@ Boundaries of Neighborhood Tabulation Areas in NYC in GeoJSON format.
 1. Are our research questions precise enough?
 2. Could we make them more specific over time, as we get more insights from the dataset?
 3. Can we include our datasets as we adjust our research questions and notice new needs?
+4. Could the TAs add our datasets to the cluster for hdfs?
+
 
