@@ -110,3 +110,4 @@ flaskcode/
 
 # PyCharm project
 .idea/
+!/data_1/Neighborhood Tabulation Areas.geojson
