@@ -104,8 +104,8 @@ venv.bak/
 .mypy_cache/
 
 # Data and results
-data/
-out/
+#data/
+#out/
 flaskcode/
 
 # PyCharm project
