@@ -1,0 +1,9 @@
+{
+    "noise annoyance":0,
+    "private property condition":1,
+    "public utility condition":2,
+    "human activity disturbance":3,
+    "pest":4,
+    "taxation or advantage program related":5,
+    "general/miscellaneous":99
+}
