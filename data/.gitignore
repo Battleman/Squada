@@ -1,3 +1,6 @@
 *.csv
 *.xlsx
 *.geojson
+*.pkl
+resolution_descriptor_wc.png
+resolution_description_wc.png
