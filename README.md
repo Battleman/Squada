@@ -12,16 +12,16 @@ All those requests are made publicly available with a lot of information regardi
  we aim to understand what are the main problems in NYC. A success in providing meaningful insights 
  could be used as a proof of concept to convince more cities to set this service up and ease
  the communication between a city and it's inhabitants.
+ 
+Based on our conclusions we will provide advice to the New York public service providers.
 
 # Research questions
-* Can we rank neighborhoods based the number/delay of requests?
-* Can we identify recurring patterns/seasonality that could help preventing the issues?
-* Is there a clear trend of the problems?
-* Can we identify external events that influence the rate of requests within a timeframe?
+* Identify recurring patterns and evolution of the complaints relating to rats. Show correlation with the complaints to the Department of Sanitation.
+* Rank neighborhoods based the number of complaints and delay in their resolution.
+* Rank Education, Police, Sanitation and Fire departments by district of operation.
+* Identify correlation between certain events, such as earthquakes or hurricanes, and the complaints that follow them.
 
 # Datasets
-List the dataset(s) you want to use, and some ideas on how do you expect to get, manage, process and enrich it/them. Show us you've read the docs and some examples, and you've a clear idea on what to expect. Discuss data size and format if relevant.
-
 ## Datasets we will use
 - **NYC 311 Service Requests from 2010 to Present**\
 All the 311 requests from 2010 up till now, updated daily. Currently about 22M entries, publicly available.
@@ -29,8 +29,13 @@ The data is stored in csv format and contains attributes like: Complaint Type, C
 Incident Address, etc.
 -  **NYC Population By Neighborhood Tabulation Areas**\
 Self explanatory. In csv format.
--  **Neighborhood Tabulation Areas**\
-Boundaries of Neighborhood Tabulation Areas in NYC in GeoJSON format. 
+
+Boundaries of areas in NYC in GeoJSON format:
+-  **Neighborhood Tabulation Areas**
+-  **Police Precincts**
+-  **School Districts**
+-  **DSNY Districts**
+-  **Fire Battalions**
 
 ## Methodology
 1. The data can be accessed from [data.cityofnewyork.us](https://data.cityofnewyork.us/)
@@ -39,8 +44,9 @@ Boundaries of Neighborhood Tabulation Areas in NYC in GeoJSON format.
 4. Compile a clean dataset of the external events related to neighborhoods, and attempt to provide insights on the changes observed by relating event timestamps to our trends.
 5. Provide a ranking of neighborhoods using relevant metrics that we will infer from the data analysis process.
 
-# A list of internal milestones up until project milestone 2
-- Nov. 4th: Making sure the data is clean, downloading it and deciding on a pipeline (Spark?)
-- Nov. 11th: Selecting relevant attributes, joining data from multiple tables. Cleaning the datasets.
-- Nov. 18th: First version of the analysis notebook with initial plots and visualization. Finding more specific/additional research questions.
-- Nov. 25th: Milestone 2 deadline. Finalizing the analysis and visualization.
+
+# A list of internal milestones up until project milestone 3
+- Dec. 2nd: Ranking agencies and neighborhoods.
+- Dec. 9th: Analysis of the influence of external events and problems with rats/
+- Dec. 16th: First version of the data story on GitHub.
+- Dec. 20th: Milestone 3 deadline. Finalizing the visualization and the data story.
