@@ -14,10 +14,9 @@ All those requests are made publicly available with a lot of information regardi
  the communication between a city and it's inhabitants.
 
 # Research questions
-* Can we rank neighborhoods based the number/delay of requests?
-* Can we identify recurring patterns/seasonality that could help preventing the issues?
-* Is there a clear trend of the problems?
-* Can we identify external events that influence the rate of requests within a timeframe?
+* Rank neighborhoods based the number of complaints and delay in their resolution.
+* Identify correlation between certain events, such as earthquakes or hurricanes, and the complaints that follow them.
+* Identify recurring patterns and evolution of the complaints relating to rats. Show correlation with the complaints to the Department of Sanitation.
 
 # Datasets
 List the dataset(s) you want to use, and some ideas on how do you expect to get, manage, process and enrich it/them. Show us you've read the docs and some examples, and you've a clear idea on what to expect. Discuss data size and format if relevant.
