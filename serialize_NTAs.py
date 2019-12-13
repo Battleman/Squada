@@ -6,7 +6,7 @@ from shapely.geometry import shape, Point
 
 
 path_nta = "data/Neighborhood Tabulation Areas.geojson"
-path_311 = "data/extract.csv"
+path_311 = "data/extract_corrupted.csv"
 path_ctc_legend = "complaint_type_cls_legend.json"
 path_ctc = "complaint_type_cls.json"
 path_output = "NTA_and_CTC_output.pickle"
@@ -40,7 +40,7 @@ def convert(selected_ctcs, *, print_step=None):
     df = df_source[pd.notnull(df_source["Latitude"]) & pd.notnull(df_source["Longitude"])].copy()
 
     # Keep entries for relevant complaint type class
-    df["Complaint Type Class Index"] = df["Complaint Type"].apply(lambda k: ct_data[k])
+    df["Complaint Type Class Index"] = df["Complaint Type"].apply(lambda k: ct_data[k] if k in ct_data else -1)
     ct_legend_inv = {v:k for k, v in ct_legend.items()}
     df["Complaint Type Class"] = df["Complaint Type Class Index"].apply(lambda k: ct_legend_inv[k])
     df = df[df["Complaint Type Class"].isin(selected_ctcs)]
