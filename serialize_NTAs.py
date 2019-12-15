@@ -36,13 +36,20 @@ def apply_to_df(df_chunks):
     return df_chunks
 
 
+def parallelize_dataframe(df, func, n_cores=4):
+    df_split = np.array_split(df, n_cores)
+    pool = Pool(n_cores)
+    df = pd.concat(pool.map(func, df_split))
+    pool.close()
+    pool.join()
+    return df
+
+
 def convert():
     with open(path_ctc_legend) as fp_legend:
         ct_legend = json.load(fp_legend)
     with open(path_ctc) as fp_data:
         ct_data = json.load(fp_data)
-
-    start_time = time.time()
 
     df_source = pd.read_pickle(path_311)
     print(df_source.shape[0], "total complaints")
@@ -66,12 +73,17 @@ def convert():
     chunk_size = int(df.shape[0]/prs)
     chunks = [df.loc[df.index[i:i + chunk_size]] for i in range(0, df.shape[0], chunk_size)]
     
+    start_time = time.time()
+
+    """
     # Process dataframes
     with ThreadPool(prs) as p:
         result = p.map(apply_to_df, chunks)
 
     # Concat all chunks
     df_reconstructed = pd.concat(result)
+    """
+    df_reconstructed = parallelize_dataframe(df, apply_to_df)
 
     end_time = time.time()
     print("Took {:.3f} seconds to process {} complaints".format(time.time() - start_time, df_reconstructed.shape[0]))
