@@ -3,7 +3,6 @@ import numpy as np
 import pandas as pd
 import time
 from multiprocessing import Pool
-from multiprocessing.dummy import Pool as ThreadPool
 from shapely.geometry import shape, Point
 
 
@@ -11,7 +10,7 @@ path_nta = "data/Neighborhood Tabulation Areas.geojson"
 path_311 = "data/311_samples.pkl"  # data/311_samples.pkl --- data/311_selected_columns.pkl
 path_ctc_legend = "complaint_type_cls_legend.json"
 path_ctc = "complaint_type_cls.json"
-path_output = "NTA_and_CTC_output.pkl"
+path_output = "data/NTA_and_CTC_output.pkl"
 
 with open(path_nta) as fp:
     js = json.load(fp)
