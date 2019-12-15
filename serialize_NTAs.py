@@ -67,25 +67,11 @@ def convert():
 
     # Add NTA column
     df["NTA"] = np.nan
-
-    # Divide dataframe to chunks
-    prs = 100 # define the number of processes
-    chunk_size = int(df.shape[0]/prs)
-    chunks = [df.loc[df.index[i:i + chunk_size]] for i in range(0, df.shape[0], chunk_size)]
     
     start_time = time.time()
-
-    """
-    # Process dataframes
-    with ThreadPool(prs) as p:
-        result = p.map(apply_to_df, chunks)
-
-    # Concat all chunks
-    df_reconstructed = pd.concat(result)
-    """
     df_reconstructed = parallelize_dataframe(df, apply_to_df)
-
     end_time = time.time()
+    
     print("Took {:.3f} seconds to process {} complaints".format(time.time() - start_time, df_reconstructed.shape[0]))
 
     print(df_reconstructed.shape)
