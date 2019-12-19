@@ -173,6 +173,21 @@
             Get started!
           </a>
         </div>
+        <div class="col-md-1">
+
+        </div>
+        <div class="col-md-5 text-md-righ text-left" style="font-family: Letter Gothic LCY Bold, LetterGotLCYBol, MONOSPACE;
+          margin-top: 200px; color:#bbb">
+          <b>In New York, <br>
+            Concrete jungle where dreams are made of <br>
+            There's nothin' you can't do <br>
+            Now you're in New York <br>
+            These streets will make you feel brand new <br>
+            Big lights will inspire you <br>
+            Let's hear it for New York, New York, New York" <br>
+            Alicia Keys, Jay-Z
+          </b>
+        </div>
       </div>
     </div>
   </div>
@@ -197,8 +212,22 @@
               broken street lamp, noise in the street, illegal parking,...
               <br>
               <br>
-              All those requests are logged, and made publicly available. We analysed the most recent version.
-              Here are our findings...
+              <i>How it came to be and where it is heading</i><br>
+              The service was first launched in Baltimore in 2001. Thanks to the success and rapid growth, it
+              served as a model to be replicated in other cities. Only two years later it was established in NYC. It is
+              known that it is the city that never sleeps and same holds for the NYC311 which operates 24/7. Since 2010
+              the calls are published on the
+              <i>
+                <u>
+                  <a href="https://data.cityofnewyork.us/browse?q=NYC+311+Service+Requests+from+2010+to+Present">data.cityofnewyork.us
+                    website</a></u>
+              </i>, updated
+              daily. Not surprisingly, its popularity is on the increase as more and more citizens are conscious of it
+              and decide not to ignore the problems they spot.
+              <br>
+              <br>
+              Note that in 2019 only calls until November are included
+              {insert plot with request per year}
             </h5>
             <img src="src/img/wordcloud.png" width="100%" class="rounded" alt="NYC Wordcloud">
           </div>
@@ -283,20 +312,35 @@
             <div class="iframe-container">
               <iframe src="src/plots/percentage_311_agency.html"></iframe>
             </div>
-            We now focus on the NYPD (New York Police Department). The number of requests concerning them,
-            as well as the time they take to solve an issue could give us some insight about NTAs.
+            Much of the calls are directed to the famous NYPD (New York Police Department).
+            Let’s zoom out from the granularity of the NTAs and look at the big picture - the boroughs.
+
+            <img width="60%" class="img-fluid rounded mx-auto d-block" src="src/maps/boroughs.jpg"
+              style="margin-top: 30px; margin-bottom: 30px">
+            311 is a non emergency line, so we don’t expect to see crimes reported. In fact the most common problems
+            tackled by NYPD through 311 are:
+            <ul>
+              <li>Noise complaints</li>
+              <li>Illegal parking</li>
+              <li>Dealing with derelict vehicles</li>
+              <li>Animal abuse</li>
+            </ul>
+            Staten Island has the reputation of being the
+            <a href="https://www.dnainfo.com/crime-safety-report/staten-island/">safest borough</a> in the Big Apple.
+            In fact it appears to be also the most calm, with the smallest proportion of its 311 calls directed to NYPD.
+
+            <div class="iframe-container">
+              <iframe src="src/plots/nypd_vs_all.html"></iframe>
+            </div>
+            On the other end of the spectrum we see Queens, where most common problem is a blocked driveway. This type
+            of complaint is, next to illegal parking and noise among top 3 annoyances in all the boroughs but
+            Manhattan. In Manhattan it is noise of all types that occupies the minds of inhabitants. Interestingly it
+            is the only borough where the issue of homeless encampments makes it to the top 10.
+
+            <div class="iframe-container" style="padding-top: 70%;">
+              <iframe src="src/plots/common_complaints.html" height="500%" style="height:500%"></iframe>
+            </div>
             <br>
-            Note that the below plots have been normalized per capita, meaning the actual size of the NTA does not matter.
-            <h4>Count of NYPD requests per year, in each NTA, normalized per capita.</h4>
-            <div class="iframe-container">
-              <iframe src="src/maps/nypd_Complaints per capita norm.html"></iframe>
-            </div>
-            <h4>Median resolution time (in hours) for requests of to NYPD.</h4>
-            <div class="iframe-container">
-              <iframe src="src/maps/nypd_Median resolution time (hours) norm.html"></iframe>
-            </div>
-            <h3>Analysis</h3>
-            <h1>TODO</h1>
           </div>
         </div>
       </div>
@@ -399,7 +443,8 @@
               <button class="tablinks" onclick="openCity(event, 'map1', 'tablinks', 'pestcontent')">Map
                 1</button>
               <button class="tablinks" onclick="openCity(event, 'map2', 'tablinks', 'pestcontent')">Map 2</button>
-              <button class="tablinks" onclick="openCity(event, 'map3', 'tablinks', 'pestcontent')">DSNY Complaints</button>
+              <button class="tablinks" onclick="openCity(event, 'map3', 'tablinks', 'pestcontent')">DSNY
+                Complaints</button>
             </div>
 
             <!-- Tab content -->
@@ -528,7 +573,7 @@
               <div class="team-player">
                 <div class="card card-plain">
                   <div class="col-md-6 ml-auto mr-auto">
-                    <img src="src/img/faces/kendall.jpg" alt="Thumbnail Image"
+                    <img src="src/img/faces/louis.jpeg" alt="Thumbnail Image"
                       class="img-raised rounded-circle img-fluid">
                   </div>
                   <h4 class="card-title">Landelle Louis
