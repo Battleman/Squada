@@ -50,7 +50,7 @@ Boundaries of areas in NYC in GeoJSON format:
 
 # Contributions
 * Artur Szalata: Parts of the data-story: from 311 plot of the calls over time till the word-cloud (inclusive on both sides), analysis on departments and boroughs, conclusion. Cleaning the dataset. Analysis of the departments of agencies in the appendix.
-* Louis Landelle:
+* Louis Landelle: Complaint type class classification; analysis, normalization of complaint type class pest; the functions to generate time geojson features and folium timelapses.
 * Julien Heitmann:
 * Olivier Cloux: Worked on analyzing and displaying seasonality pattern in the dataset. Also, created most of the structure of the website, and made it responsive, modern, and concise. Design of poster and presentation.
 All of us will work on the poster and presentation.
