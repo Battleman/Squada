@@ -9,10 +9,10 @@ Inhabitants can submit their requests either by phone or by using a web platform
 In NYC the service has been introduced in 2003 and became the largest 3-1-1 in operation to date.
 All those requests are made publicly available with a lot of information regarding each ticket, such as:
  time of submission, time of closing, neighborhood, geolocation, etc. Through analysis of this data
- we aim to understand what are the main problems in NYC. A success in providing meaningful insights 
+ we aim to understand what are the main problems in NYC. A success in providing meaningful insights
  could be used as a proof of concept to convince more cities to set this service up and ease
  the communication between a city and it's inhabitants.
- 
+
 Based on our conclusions we will provide advice to the New York public service providers.
 
 # Research questions
@@ -50,3 +50,10 @@ Boundaries of areas in NYC in GeoJSON format:
 - Dec. 9th: Analysis of the influence of external events and problems with rats/
 - Dec. 16th: First version of the data story on GitHub.
 - Dec. 20th: Milestone 3 deadline. Finalizing the visualization and the data story.
+
+
+# Contributions
+* Artur Szalata:
+* Louis Landelle:
+* Julien Heitmann:
+* Olivier Cloux: Worked on analyzing and displaying seasonality pattern in the dataset. Also, created most of the structure of the website, and made it responsive, modern, and concise.
