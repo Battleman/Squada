@@ -1,5 +1,7 @@
 # Life in New York City
 
+[Data story website](https://battleman.github.io/Squada/)
+
 # Abstract
 Nowadays many communities in the United States and Canada provide a special telephone number
 "3-1-1". It works just like 9-1-1, but for request of non-emergency municipal services,
