@@ -267,18 +267,39 @@
             we are able to "rank" them according to certain criterions. With that, we could help recommend arriving
             citizens some favorable places according to their preferences: if noise is a real problem for them, we would
             recommend them
-            not to settle in a place with many requests linked to noise.
-            <h3>Result:</h3>
-          </div>
-          <div class="text-center">
-            <h4>Number of 3-1-1 complaints per NTA, normalized by capita</h4>
-            <div class="iframe-container">
-              <iframe src="src/maps/.html"></iframe>
-            </div>
-          </div>
+            not to settle in a place with many requests linked to noise. We have access to the population data of the 
+            NTAs (2010 census), which will allow us to construct a better ranking scheme that normalizes the number of 
+            complaints by the population size of the NTA.
           <div class="text-justify">
             <h3>Analysis</h3>
-            <h1>TODO</h1>
+            A naive ranking would only look at the number of complaints per NTA. Since we have access to population 
+            sizes, a more sensible ranking scheme takes into account the population size of an NTA.
+            <div class="iframe-container" style="padding-top: 70%;">
+              <iframe src="src/plots/nta_ranking.html" height="500%" style="height:500%"></iframe>
+            </div>
+
+            One NTA really stands out, both in terms of total complaints and complaints per capita: <i>Rikers Island</i>. 
+            This example highlights the fact that no ranking is perfect and should therefore be taken with a grain of 
+            salt, we would not recommend moving to that island as it is a 1.67 km2 island in the East River between 
+            Queens and the Bronx that is home to New York City's main jail complex. 
+            <br>
+            Interesting fact about  <i>Stuyvesant Town-Cooper Village</i> and <i>Starrett City</i>: both NTAs have their 
+            own public safety forces, which might explain why they have so few complaints per capita. In fact, <i>Starrett City</i> had 
+            one of the city's lowest crime rates, mainly because of the existence of the security force. This private 
+            security force has been used as a case study in the advantages of private security over public policing.
+            <br>
+            <br>
+            Finally, while a general rankinkg that looks at all types of complaints certainly is helpful, people have different 
+            preferences when it comes to choosing a place to live. For instance one might not care about the fact that there are 
+            frequently problems with the infractructure of a neighborhood (brooken streetlight, graffitis on the walls, but be 
+            very sensitive to noise. This is why we now take a closer look at a selection of NTAs, that already have the lowest 
+            number of complaints per capita, but distinguish between different Complaint Categegory Classes (CTCs), to see how 
+            the NTAs perform in each category, with respect to the city-wide average. 
+
+            <div class="iframe-container">
+              <iframe src="src/plots/nta_heatmap.html"></iframe>
+            </div>
+
           </div>
         </div>
       </div>
@@ -574,7 +595,7 @@
               <div class="team-player">
                 <div class="card card-plain">
                   <div class="col-md-6 ml-auto mr-auto">
-                    <img src="src/img/faces/avatar.jpg" alt="Thumbnail Image"
+                    <img src="src/img/faces/julien.jpg" alt="Thumbnail Image"
                       class="img-raised rounded-circle img-fluid">
                   </div>
                   <h4 class="card-title">Heitmann Julien
@@ -582,7 +603,8 @@
                     <!-- <small class="card-description text-muted">Model</small> -->
                   </h4>
                   <div class="card-body">
-                    <p class="card-description">Probably the most handsome of the team.</p>
+                    <p class="card-description">Usually responds <i>You son a gun, I'm in</i> when asked if he wants
+                      to participate in a data analysis project.</p>
                   </div>
                   <div class="card-footer justify-content-center">
                     <a href="#pablo" class="btn btn-link btn-just-icon"><i class="fa fa-twitter"></i></a>
