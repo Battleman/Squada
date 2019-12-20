@@ -16,9 +16,9 @@ All those requests are made publicly available with a lot of information regardi
 Based on our conclusions we will provide advice to the New York public service providers.
 
 # Research questions
-* Identify recurring patterns and evolution of the complaints relating to rats. Show correlation with the complaints to the Department of Sanitation.
+* Identify recurring patterns and evolution of the complaints relating to rats.
 * Rank neighborhoods based the number of complaints and delay in their resolution.
-* Rank Education, Police, Sanitation and Fire departments by district of operation.
+* Identify major problems in boroughs tackled by NYPD through 311.
 * Identify correlation between certain events, such as earthquakes or hurricanes, and the complaints that follow them.
 
 # Datasets
@@ -28,6 +28,8 @@ All the 311 requests from 2010 up till now, updated daily. Currently about 22M e
 The data is stored in csv format and contains attributes like: Complaint Type, Created Date, Closed Date, Due Date,
 Incident Address, etc.
 -  **NYC Population By Neighborhood Tabulation Areas**\
+Self explanatory. In csv format.
+-  **NYC Population By Borough**\
 Self explanatory. In csv format.
 
 Boundaries of areas in NYC in GeoJSON format:
@@ -42,18 +44,11 @@ Boundaries of areas in NYC in GeoJSON format:
 2. The 311 dataset contains location based on GPS coordinates while the population data is based on the Neighborhood Tabulation Areas, so we will have to map the requests to regions using the Neighborhood Tabulation Areas dataset.
 3. Analyse complaint types and dates to identify short-term and long-term trends for Neighborhood Tabulation Areas, seasonalities, and separate the changes within neighborhoods from city-wide trends.
 4. Compile a clean dataset of the external events related to neighborhoods, and attempt to provide insights on the changes observed by relating event timestamps to our trends.
-5. Provide a ranking of neighborhoods using relevant metrics that we will infer from the data analysis process.
-
-
-# A list of internal milestones up until project milestone 3
-- Dec. 2nd: Ranking agencies and neighborhoods.
-- Dec. 9th: Analysis of the influence of external events and problems with rats/
-- Dec. 16th: First version of the data story on GitHub.
-- Dec. 20th: Milestone 3 deadline. Finalizing the visualization and the data story.
-
+5. Provide a insights about neighborhoods using relevant metrics.
 
 # Contributions
-* Artur Szalata:
+* Artur Szalata: Parts of the data-story: from 311 plot of the calls over time till the word-cloud (inclusive on both sides), analysis on departments and boroughs, conclusion. Cleaning the dataset. Analysis of the departments of agencies in the appendix.
 * Louis Landelle:
 * Julien Heitmann:
-* Olivier Cloux: Worked on analyzing and displaying seasonality pattern in the dataset. Also, created most of the structure of the website, and made it responsive, modern, and concise. Will work on the poster and presentation, probably helping in the design.
+* Olivier Cloux: Worked on analyzing and displaying seasonality pattern in the dataset. Also, created most of the structure of the website, and made it responsive, modern, and concise. Design of poster and presentation.
+All of us will work on the poster and presentation.
