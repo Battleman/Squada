@@ -39,4 +39,6 @@ def agency_complaint_resolution(agencies_df):
         axes[i].set_title(agency_names[i])
         axes[i].set_ylabel("number of complaints (log)")
         axes[i].set_xlabel("number of days")
-    plt.savefig("plots/resolution_time_nypd_dsny.png")
+    path = "plots/resolution_time_nypd_dsny.png"
+    plt.savefig(path)
+    return path
