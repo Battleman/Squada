@@ -123,7 +123,7 @@
   </script>
 </head>
 
-<body class="landing-page sidebar-collapse" style="background-color: #282828; color: #BBC8D8">
+<body class="landing-page sidebar-collapse" style="background-color: #383838; color: #BBC8D8">
   <nav class="navbar navbar-transparent navbar-color-on-scroll fixed-top navbar-expand-lg" color-on-scroll="100"
     id="sectionsNav">
     <div class="container">
@@ -210,6 +210,12 @@
               . By calling this number (or by visiting the online portal), you can make requests of inform
               the city of very various problems: rats sighting, broken water heater in a city building,
               broken street lamp, noise in the street, illegal parking,...
+              <div class="iframe-container">
+                <iframe src="src/plots/calls_by_year.html"></iframe>
+              </div>
+              <div class="text-left">
+                <small>Note that in 2019 only calls until November are included</small>
+              </div>
               <br>
               <br>
               <i>How it came to be and where it is heading</i><br>
@@ -226,8 +232,6 @@
               and decide not to ignore the problems they spot.
               <br>
               <br>
-              Note that in 2019 only calls until November are included
-              {insert plot with request per year}
             </h5>
             <img src="src/img/wordcloud.png" width="100%" class="rounded" alt="NYC Wordcloud">
           </div>
@@ -258,16 +262,10 @@
               were solely designating boundaries of historical neighborhoods.
             </cite>
             <br>
-            <br>
-            <h3>Research Question: </h3>
-            Can we rank NTAs according to their requests ?
-            <br>
-            <br>
-            <h3>Motivation:</h3>
-            By computing some metrics relative to NTAs, because they have a relatively similar count of inhabitants,
+            It becomes interesting to compare NTAs between them with an innovative criterion: the number of requests
+            made concerning each of them. With that, and because they have a relatively similar count of inhabitants,
             we are able to "rank" them according to certain criterions. With that, we could help recommend arriving
-            citizens
-            some favorable places according to their preferences: if noise is a real problem for them, we would
+            citizens some favorable places according to their preferences: if noise is a real problem for them, we would
             recommend them
             not to settle in a place with many requests linked to noise.
             <h3>Result:</h3>
@@ -275,7 +273,7 @@
           <div class="text-center">
             <h4>Number of 3-1-1 complaints per NTA, normalized by capita</h4>
             <div class="iframe-container">
-              <iframe src="src/maps/sample_map.html"></iframe>
+              <iframe src="src/maps/.html"></iframe>
             </div>
           </div>
           <div class="text-justify">
@@ -373,14 +371,18 @@
           </div>
           Below, you'll find an interactive graph, showing the count of request per month, split according to
           the "Complaint Type". Note that we only kept the 100 most frequent.
-          <i>Howto: you can click on the legend items to enable/disable items one at a time.
-            If you wish to enable/disable all at once, double click on an item. Use the tools
-            at the top of the chart to move, zoom, etc.
-          </i>
+          <br>
           <div class="text-center">
             <div class="iframe-container">
-              <iframe src="src/plots/Complaint_Type.html"></iframe>
+              <iframe src="src/plots/Complaint Type.html"></iframe>
             </div>
+          </div>
+          <div class="text-left">
+            <small>
+              Howto: you can click on the legend items to enable/disable items one at a time.
+              If you wish to enable/disable all at once, double click on an item. Use the tools
+              at the top of the chart to move, zoom, etc.
+            </small>
           </div>
           <div class="text-justify">
             <h3>Analysis</h3>
@@ -434,7 +436,7 @@
       <div class="section">
         <div class="col-md-10 ml-auto mr-auto">
           <div class="text-center">
-            <h2 id="start_content" class="title">Zoom: Pest and Noise</h2>
+            <h2 id="start_content" class="title">Zoom: Pest in NYC</h2>
           </div>
           <div class="text-justify">
           </div>
@@ -549,7 +551,7 @@
               <div class="team-player">
                 <div class="card card-plain">
                   <div class="col-md-6 ml-auto mr-auto">
-                    <img src="src/img/faces/christian.jpg" alt="Thumbnail Image"
+                    <img src="src/img/faces/olivier.jpg" alt="Thumbnail Image"
                       class="img-raised rounded-circle img-fluid">
                   </div>
                   <h4 class="card-title">Cloux Olivier
