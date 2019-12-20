@@ -58,6 +58,7 @@ def map_features(features):
 
     return m
 
+
 def calls_by_year(df_311_with_year):
     df_311_year = df_311_with_year.groupby("Year").count()["Unique Key"]
     barplot_text = df_311_year.values.round(-3) // 1000
@@ -84,7 +85,8 @@ def calls_by_year(df_311_with_year):
     return plot_filename
 
 
-def agency_complaint_resolution(agencies_df):
+def agency_complaint_resolution(agencies):
+    agencies_df = [agency[0] for agency in agencies]
     agency_names = ["NYPD", "DSNY"]
     f, axes = plt.subplots(2, figsize=(16, 9))
     plt.subplots_adjust(bottom=0.05)

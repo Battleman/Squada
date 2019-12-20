@@ -2,6 +2,7 @@ import pandas as pd
 from shapely.geometry import shape, Point
 import json
 import numpy as np
+import warnings
 
 nta_geojson = "data/Neighborhood Tabulation Areas.geojson"
 nta_id_field = "ntacode"
@@ -100,6 +101,44 @@ def get_agencies_array(df_311):
     for agency in agencies:
         agency = get_population_per_district(agency, nta_pop_df, nta_polygons)
 
+    return agencies
+
+
+def get_statistics_for_agencies(agencies_df, agencies, rank=False):
+    grouped_agencies = []
+    for i, agency in enumerate(agencies_df):
+        grouped_agencies.append(
+            agency.groupby(["District"])["Resolution Time (days)"].agg(
+                ["mean", "median", "count"])
+            .rename(columns={"median": "Median resolution time (days)",
+                             "mean": "Mean resolution time (days)",
+                             "count": "Number of complaints"}))
+        district_population = pd.DataFrame(agencies[i][3]).set_index(0)
+        grouped_agencies[i] = grouped_agencies[i].join(district_population, on="District").rename(
+            columns={1: "District population"})
+        # drop districts with very small number of inhabitants. As previously noted those are often parks
+        grouped_agencies[i] = grouped_agencies[i][
+            grouped_agencies[i]["District population"] > 10000]
+
+        grouped_agencies[i]["Complaints per 1k capita"] = \
+            1000 * grouped_agencies[i]["Number of complaints"] / grouped_agencies[i][
+                "District population"]
+        grouped_agencies[i].sort_values("Complaints per 1k capita", inplace=True)
+
+        if rank:
+            grouped_agencies[i]["Mean resolution time rank"] = grouped_agencies[i][
+                "Mean resolution time (days)"].rank()
+            grouped_agencies[i]["Median resolution time rank"] = grouped_agencies[i][
+                "Median resolution time (days)"].rank(method="first")
+            grouped_agencies[i]["Number of complaints rank"] = grouped_agencies[i][
+                "Number of complaints"].rank(method="first")
+            grouped_agencies[i]["Complaints per 1k capita rank"] = grouped_agencies[i][
+                "Complaints per 1k capita"].rank(method="first")
+
+    return grouped_agencies
+
+
+def add_resolution_time(agencies):
     # adding resolution time
     agencies_df = [agency[0] for agency in agencies]
     for i, agency in enumerate(agencies):
@@ -109,9 +148,18 @@ def get_agencies_array(df_311):
 
     for agency in agencies_df:
         agency.rename(columns={"Resolution Time": "Resolution Time (days)"}, inplace=True)
+    return agencies_df
 
-    return agencies
+def clean_dsny(dsny_agency):
+    return dsny_agency[~dsny_agency["Complaint Type"].isin([
+        "Adopt-A-Basket", "Request Xmas Tree Collection", "Litter Basket / Request",
+        "Electronics Waste",
+        "Electronics Waste Appointment", "Request Large Bulky Item Collection"
+    ])]
 
-
-
-
+def remove_nans(agencies_df):
+    for agency in agencies_df:
+        agency.dropna(inplace=True)
+        warnings.simplefilter("ignore")
+        agency["Created Year"] = agency["Created Date"].apply(lambda x: x.year)
+    return agencies_df
