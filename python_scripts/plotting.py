@@ -6,6 +6,7 @@ def calls_by_year(df_311_with_year):
     df_311_year = df_311_with_year.groupby("Year").count()["Unique Key"]
     barplot_text = df_311_year.values.round(-3) // 1000
     barplot_text = [str(val) + "k" for val in barplot_text]
+
     fig = go.Figure(
         data=go.Bar(x=df_311_year.keys(), y=df_311_year.values,
                     marker=dict(
