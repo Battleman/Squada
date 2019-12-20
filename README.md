@@ -56,4 +56,4 @@ Boundaries of areas in NYC in GeoJSON format:
 * Artur Szalata:
 * Louis Landelle:
 * Julien Heitmann:
-* Olivier Cloux: Worked on analyzing and displaying seasonality pattern in the dataset. Also, created most of the structure of the website, and made it responsive, modern, and concise.
+* Olivier Cloux: Worked on analyzing and displaying seasonality pattern in the dataset. Also, created most of the structure of the website, and made it responsive, modern, and concise. Will work on the poster and presentation, probably helping in the design.
