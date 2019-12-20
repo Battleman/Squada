@@ -438,147 +438,108 @@
         <div class="col-md-10 ml-auto mr-auto">
           <div class="text-center">
             <h2 id="start_content" class="title">Zoom: Pest in NYC</h2>
+            <img src="src/img/nyc.gif" alt="Rat with Pizza" class="img-raised img-fluid">
           </div>
-          <div class="text-justify">
-          </div>
-          <div class="text-center">
-            <!--<div class="tab">
-              <button class="tablinks" onclick="openCity(event, 'map1', 'tablinks', 'pestcontent')">Map
-                1</button>
-              <button class="tablinks" onclick="openCity(event, 'map2', 'tablinks', 'pestcontent')">Map 2</button>
-              <button class="tablinks" onclick="openCity(event, 'map3', 'tablinks', 'pestcontent')">DSNY
-                Complaints</button>
-            </div>-->
-
-            <!-- Tab content -->
-            <div id="map1" class="pestcontent">
-              <!-- <div class="iframe-container">
-                <iframe src="src/plots/percentage_311_agency.html" width="100%"></iframe>
-              </div> -->
-              <h1>TODO</h1>
-            </div>
-
-            <div id="map2" class="pestcontent">
-              <h1>TODO</h1>
-              <!-- <div class="iframe-container">
-                <iframe src="src/plots/percentage_311_agency.html"></iframe>
-              </div> -->
-            </div>
-
-            <div id="map3" class="pestcontent">
-              <div class="iframe-container">
-                <iframe src="src/maps/dsny_Complaints per capita norm.html"></iframe>
-              </div>
-            </div>
-          </div>
-        
-          <div class="text-justify">
-            <h3>Analysis</h3>
-          </div>
-            
-          <div class="text-center">
-              <img src="src/img/nyc.gif" alt="Rat with Pizza"
-              class="img-raised img-fluid">
-          </div>
-
-          <br>
-          <div class="text-justify">
-            <i>
-              Can you spot the NYC stereotypes in the picture above?
-              Image taken from "New York City rat taking pizza home on the subway (Pizza Rat)"
-            </i>
-            <br>
-
-            The Rat Problem in NYC is so famous that it is honored by its dedicated Wikipedia article.
-            An official channel for pest spotting in NYC is the 3-1-1 report system.
-            <br>
-            <br>
-            Thus, our dataset offers us the opportunity to take a look into the famous Rat Problem,
-            principal component of pest reports aggregated under the complaint type class "pest".
-            <br>
-            <br>
-
-            We describe the steps to create a normalized timelapse heatmap/by NTA of pest report calls from 2010 to 2019 in the city.
-
-            <br>
-            <br>
-            We ultimately want to represent the intensity of pest problems by NTA using a weight computed from the amount of 311 calls. We note:
-
-            <br>
-            <br>
-            <ul>
-              <li>NTAs have different populations and we can assume population is somewhat proportional to reports count
-                </li>
-              <li>311 entries have been increasing over the decade
-                </li>
-            </ul> 
-
-            We will generate the weight by using the pest 311 entries, normalized per capita, normalized per total number of reports each year. We will restrict our source dataset to entries which contain valid information for date, NTA, for which NTAs contain population count, and which are defined as complaint type class pests. 
-            <br>
-            <br>
-            You can find a visual representation the formula below:
-            <br>
-            <br>
-          </div>
-
-          <div class="text-center">
-            <img src="src/img/rat_weight_equation.png" alt="Rat weight equation Image" width=50%          
-            class="img-raised img-fluid">
-          </div>
-
-          <br>
-          <br>
-
-          <div class="text-justify">
-            You can find detailed information about seasonality description, normalization process, re-weighting of the NTAs in the notebook.
-            
-            <br>
-            <br>
-            Below you can find the result of our computation, as a timelapse map over NYC:
-          </div>
-
-          <br>
-          
-          <!-- pests map -->
-          <div class="iframe-container">
-            <iframe src="src/maps/Pests.html" width="100%"></iframe>
-          </div>
-
-          <div class="text-justify">
-
-            <br>
-            <br>
-
-            As discussed in the notebook, the following conclusions can be made from the timelapse.
-            <ul>
-              <li>Clinton Hill, Prospect Heights, Stuyvesant and Bedford, at the center of Brooklyn, have fluctuating intensities over the years but consistently stay at the most pest-affected NTAs of the city.</li>
-              <li>During the early years of the decade, Staten Island is impacted more in the southern part. Over the decade, the southern part seems to be left alone by rats gradually, and inversly the nothern part slightly increases in weight. In general the pest intensity slightly subsides over the decade on Staten Island.</li>
-              <li>Southern Queens starts off as a hotspot for pest reporting. It gradually calms over the decade, but stays overall the most affected area in Queens.</li>
-              <li>In Central Harlem South, the problem is very intense throughout the decade. Melrose South-Mott Haven North, in the Bronx, witnesses a mostly constant increase in weight over the decade.</li>
-              <li>Southern Manhattan appears to gradually become more affected at the first half of the decade which then diminished after 2015.</li>
-            </ul>
-            </div>
-            Here are the areas comparatively unaffected by the problem:
-            <ul>
-              <li>  Southern Brooklyn, especially south of Prospect park. </li>
-              <li>  North-eastern Queens, east of Flushing-Meadows-Park but above the Grand Central parkway (south of the parkway, Jamaica, is affected). </li>
-              <li>  South Staten Island since the improvements of the early part of the decade. </li>
-            </ul>
-
-
-            <br>
-            We also provide complementary NTA ranking for best and worse pest exposure in the notebook.
-            <br>
-            <br>
-
-
-
-
-
-
         </div>
+
+        <br>
+        <div class="text-justify">
+          <i>
+            Can you spot the NYC stereotypes in the picture above?
+            Image taken from "New York City rat taking pizza home on the subway (Pizza Rat)"
+          </i>
+          <br>
+
+          The Rat Problem in NYC is so famous that it is honored by its dedicated Wikipedia article.
+          An official channel for pest spotting in NYC is the 3-1-1 report system.
+          <br>
+          <br>
+          Thus, our dataset offers us the opportunity to take a look into the famous Rat Problem,
+          principal component of pest reports aggregated under the complaint type class "pest".
+          <br>
+          <br>
+
+          We describe the steps to create a normalized timelapse heatmap/by NTA of pest report calls from 2010 to 2019
+          in the city.
+
+          <br>
+          <br>
+          We ultimately want to represent the intensity of pest problems by NTA using a weight computed from the
+          amount of 311 calls. We note:
+
+          <br>
+          <br>
+          <ul>
+            <li>NTAs have different populations and we can assume population is somewhat proportional to reports count
+            </li>
+            <li>311 entries have been increasing over the decade
+            </li>
+          </ul>
+
+          We will generate the weight by using the pest 311 entries, normalized per capita, normalized per total
+          number of reports each year. We will restrict our source dataset to entries which contain valid information
+          for date, NTA, for which NTAs contain population count, and which are defined as complaint type class pests.
+          <br>
+          <br>
+          You can find a visual representation the formula below:
+          <br>
+          <br>
+        </div>
+
+        <div class="text-center">
+          <img src="src/img/rat_weight_equation.png" alt="Rat weight equation Image" width=50%
+            class="img-raised img-fluid">
+        </div>
+
+        <br>
+        <br>
+
+        <div class="text-justify">
+          You can find detailed information about seasonality description, normalization process, re-weighting of the
+          NTAs in the notebook.
+
+          <br>
+          <br>
+          Below you can find the result of our computation, as a timelapse map over NYC:
+        </div>
+        <br>
+
+        <!-- pests map -->
+        <div class="iframe-container">
+          <iframe src="src/maps/Pests.html" width="100%"></iframe>
+        </div>
+
+        <div class="text-justify">
+          <br>
+          <br>
+          As discussed in the notebook, the following conclusions can be made from the timelapse.
+          <ul>
+            <li>Clinton Hill, Prospect Heights, Stuyvesant and Bedford, at the center of Brooklyn, have fluctuating
+              intensities over the years but consistently stay at the most pest-affected NTAs of the city.</li>
+            <li>During the early years of the decade, Staten Island is impacted more in the southern part. Over the
+              decade, the southern part seems to be left alone by rats gradually, and inversly the nothern part
+              slightly increases in weight. In general the pest intensity slightly subsides over the decade on Staten
+              Island.</li>
+            <li>Southern Queens starts off as a hotspot for pest reporting. It gradually calms over the decade, but
+              stays overall the most affected area in Queens.</li>
+            <li>In Central Harlem South, the problem is very intense throughout the decade. Melrose South-Mott Haven
+              North, in the Bronx, witnesses a mostly constant increase in weight over the decade.</li>
+            <li>Southern Manhattan appears to gradually become more affected at the first half of the decade which
+              then diminished after 2015.</li>
+          </ul>
+        </div>
+        Here are the areas comparatively unaffected by the problem:
+        <ul>
+          <li> Southern Brooklyn, especially south of Prospect park. </li>
+          <li> North-eastern Queens, east of Flushing-Meadows-Park but above the Grand Central parkway (south of the
+            parkway, Jamaica, is affected). </li>
+          <li> South Staten Island since the improvements of the early part of the decade. </li>
+        </ul>
+        <br>
+        We also provide complementary NTA ranking for best and worse pest exposure in the notebook.
       </div>
     </div>
+  </div>
   </div>
   <div class="main main-raised" style="background-color: #222222">
     <div class="container">
@@ -590,6 +551,13 @@
 
           We hope you enjoyed our tour in the City of Dreams. We looked at it from the point of the audible New Yorkers - those who don’t hesitate to report the problems at sight via 3-1-1 service. We have seen what bugs them most and observed temporal patterns. Even within one city the issues vary from place to place and that’s what we’ve observed in the scale of boroughs and in finer granularity, NTAs. At last, we zoomed in to the problem of pests in the city and there we found out that it is not stationary - over years different, but nearby, neighbourhoods are haunted by rats. This information might serve the city agencies such as Department of Sanitation in allocating their resources.
           <div class="text-justify">
+            We hope you enjoyed our tour in the City of Dreams. We looked at it from the point of the audible New
+            Yorkers - those who don’t hesitate to report the problems at sight via 3-1-1 service. We have seen what bugs
+            them most and observed temporal patterns. Even within one city the issues vary from place to place and
+            that’s what we’ve observed in the scale of boroughs and in finer granularity, NTAs. At last, we zoomed in to
+            the problem of pests in the city and there we found out that it is not stationary - over years different,
+            but nearby, neighbourhoods are haunted by rats. This information might serve the city agencies such as
+            Department of Sanitation in allocating their resources.
           </div>
         </div>
       </div>
@@ -687,7 +655,8 @@
                     <!-- <small class="card-description text-muted">Model</small> -->
                   </h4>
                   <div class="card-body">
-                    <p class="card-description">If data is the new oil then call me the 2010 San Bruno pipeline explosion which caused 8 fatalities and injured 58.</p>
+                    <p class="card-description">If data is the new oil then call me the 2010 San Bruno pipeline
+                      explosion which caused 8 fatalities and injured 58.</p>
                   </div>
                   <div class="card-footer justify-content-center">
                     <a href="https://www.github.com/louislandelle" class="btn btn-link btn-just-icon"><i
